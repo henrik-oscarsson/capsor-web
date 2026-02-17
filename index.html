@@ -24,7 +24,7 @@
 
         :root {
             --color-primary: #9DFF20;
-            --color-secondary: #345C00;
+            --color-secondary: #4a90c4;
             --color-orange: rgb(230, 139, 20);
             --color-black: #111;
             --color-white: #fff;
@@ -95,7 +95,7 @@
         }
 
         .nav-links a:hover {
-            color: #4a90c4;
+            color: var(--color-secondary);
         }
 
         .nav-links .btn-nav {
@@ -107,7 +107,7 @@
         }
 
         .nav-links .btn-nav:hover {
-            background: #4a90c4;
+            background: var(--color-secondary);
             color: var(--color-white);
         }
 
@@ -186,7 +186,7 @@
 
         .hero-accent {
             display: inline;
-            background: linear-gradient(120deg, #4a90c4 0%, #4a90c4 100%);
+            background: linear-gradient(120deg, var(--color-secondary) 0%, var(--color-secondary) 100%);
             background-size: 100% 0.3em;
             background-repeat: no-repeat;
             background-position: 0 88%;
