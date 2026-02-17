@@ -4,11 +4,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capsor AB</title>
+    <title>Capsor AB — CTO & Technical Leadership</title>
+    <meta name="description"
+        content="Henrik Oscarsson — CTO and senior engineering leader with 25 years of experience building and scaling complex software systems.">
+    <link rel="icon" href="favicon.ico" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #9DFF20;
+            --color-secondary: #345C00;
+            --color-orange: rgb(230, 139, 20);
+            --color-black: #111;
+            --color-white: #fff;
+            --color-gray: #666;
+            --color-light: #f5f5f5;
+            --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --max-width: 960px;
+            --padding: clamp(1.25rem, 4vw, 3rem);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-black);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            background: var(--color-white);
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1rem var(--padding);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--color-black);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--color-secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-black);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-secondary);
+        }
+
+        .nav-links .btn-nav {
+            background: var(--color-black);
+            color: var(--color-white);
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+        }
+
+        .nav-links .btn-nav:hover {
+            background: var(--color-secondary);
+            color: var(--color-white);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-black);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Passion Banner */
+        .passion-banner {
+            background: var(--color-orange);
+            padding: 4rem var(--padding);
+            text-align: right;
+        }
+
+        .passion-banner .inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .passion-banner h2 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--color-black);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .passion-banner h2 .white {
+            color: var(--color-white);
+        }
+
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 420px;
+        }
+
+        /* Hero */
+        .hero {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 4rem var(--padding) 3rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: var(--color-black);
+            max-width: 780px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-accent {
+            display: inline;
+            background: linear-gradient(120deg, #4a90c4 0%, #4a90c4 100%);
+            background-size: 100% 0.3em;
+            background-repeat: no-repeat;
+            background-position: 0 88%;
+        }
+
+        /* Sections */
+        section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem var(--padding);
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #333;
+            max-width: 760px;
+        }
+
+        .divider {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+
+        .divider hr {
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Content blocks */
+        .content-block {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3.5rem var(--padding);
+        }
+
+        .content-block h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+            color: var(--color-black);
+        }
+
+        .content-block h2 .dot {
+            color: var(--color-primary);
+        }
+
+        .content-block p {
+            color: #444;
+            line-height: 1.8;
+            max-width: 720px;
+        }
+
+        /* Roles section */
+        .roles {
+            background: var(--color-light);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        .roles p {
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .company-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .company-tags span {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            background: var(--color-white);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            color: var(--color-secondary);
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 4rem var(--padding);
+        }
+
+        .cta-box {
+            background: var(--color-black);
+            color: var(--color-white);
+            border-radius: 1.25rem;
+            padding: 3.5rem;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: var(--color-orange);
+            color: var(--color-white);
+            padding: 0.85rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 139, 20, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem var(--padding) 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: var(--color-white);
+                padding: 1.5rem var(--padding);
+                gap: 1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hero {
+                padding: 3rem var(--padding) 2.5rem;
+            }
+
+            .cta-box {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .roles {
+                padding: 1.75rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Capsor AB</h1>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Capsor <span>AB</span></a>
+            <button class="mobile-toggle" aria-label="Toggle menu"
+                onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="mailto:henrik@capsor.se" class="btn-nav">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+        <img src="iStock-1291279253.jpg"
+            alt="Ones and zeros — digital technology" loading="eager">
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>CTO &amp; Technical Leadership for <span class="hero-accent">Modern Product Teams</span></h1>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <p class="about-text">I'm Henrik Oscarsson, a CTO and senior engineering leader with 25 years of experience
+            building and scaling complex software systems — primarily in finance, trading, and high-transaction payment
+            environments. I work at the intersection of technology, business, and execution, helping companies deliver
+            robust platforms with speed, clarity, and long-term sustainability. Over the years, I've supported
+            organizations ranging from global enterprises to fast-moving product teams, often stepping in where
+            technical direction, architectural clarity, and delivery focus are critical. My role is to ensure that
+            technology becomes an enabler of growth — not a bottleneck.</p>
+    </section>
+
+    <div class="divider">
+        <hr>
+    </div>
+
+    <!-- Building Strong Teams -->
+    <div class="content-block">
+        <h2>Building Strong Teams Through Mentorship and Architecture<span class="dot">.</span></h2>
+        <p>My work often goes beyond systems design — I take an active role in mentoring engineers, strengthening team
+            structure, and raising the technical standard across an organization. I enjoy building environments where
+            developers can thrive, grow in confidence, and deliver high-quality software together. I've led teams in
+            both startup and enterprise settings, and I'm comfortable in CTO-level steering groups where technology
+            decisions must align tightly with business goals. Clear communication between engineering and leadership is
+            often the key to successful execution, and it's a space where I bring long experience.</p>
+    </div>
+
+    <div class="divider">
+        <hr>
+    </div>
+
+    <!-- AI-First Engineering -->
+    <div class="content-block">
+        <h2>AI-First Engineering<span class="dot">.</span></h2>
+        <p>Today, I apply an AI-first approach to software development and technical leadership — using modern tools
+            such as Claude and AI-assisted workflows to increase delivery speed, improve developer productivity, and
+            reduce unnecessary complexity. The goal is not automation for its own sake, but building calmer, sharper,
+            more effective engineering teams. When AI is introduced thoughtfully, it becomes a force multiplier: helping
+            teams stay focused, ship faster, and spend more time solving the right problems.</p>
+    </div>
+
+    <div class="divider">
+        <hr>
+    </div>
+
+    <!-- Recent Roles -->
+    <div class="content-block">
+        <h2>Recent Roles<span class="dot">.</span></h2>
+        <div class="roles">
+            <p>Most recently, I'm serving as CTO at Valuno Group, setting technical direction for crypto payment
+                solutions, mentoring engineers, and driving hiring and team growth in a high-transaction, regulated
+                environment. My background also includes leading architecture and performance improvements across
+                platforms at Quickbit, FRISQ, Barnebys, NASDAQ/OMX, SIX Telekurs, and AMEX — often in systems where
+                reliability, latency, and scalability are essential. I'm frequently brought in to simplify complex
+                environments and help teams deliver with confidence.</p>
+            <div class="company-tags">
+                <span>Valuno Group</span>
+                <span>Quickbit</span>
+                <span>FRISQ</span>
+                <span>Barnebys</span>
+                <span>NASDAQ/OMX</span>
+                <span>SIX Telekurs</span>
+                <span>AMEX</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Passion Banner -->
+    <div class="passion-banner">
+        <div class="inner">
+            <h2>Passion for <span class="white">Software</span></h2>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+        <div class="cta-box">
+            <h2>Let's Build What's Next</h2>
+            <p>If you need a technical leader who can combine architecture depth, team mentorship, and AI-enabled
+                execution, I'd love to help. Whether you're scaling a product team, modernizing a platform, or looking
+                for CTO-level guidance during a critical phase, I bring both strategic oversight and hands-on
+                engineering
+                experience.</p>
+            <a href="mailto:henrik@capsor.se" class="btn-cta">Get in Touch</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span>&copy; 2008–2026 Capsor AB. All Rights Reserved.</span>
+        <a href="mailto:henrik@capsor.se">henrik@capsor.se</a>
+    </footer>
 </body>
 
 </html>
