@@ -68,15 +68,13 @@
         }
 
         .logo {
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: var(--color-black);
             text-decoration: none;
-            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
         }
 
-        .logo span {
-            color: var(--color-secondary);
+        .logo img {
+            display: block;
         }
 
         .nav-links {
@@ -255,24 +253,6 @@
             line-height: 1.8;
         }
 
-        .company-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .company-tags span {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            background: var(--color-white);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 0.35rem 0.85rem;
-            border-radius: 9999px;
-            color: var(--color-secondary);
-            font-weight: 500;
-        }
-
         /* CTA Section */
         .cta {
             max-width: var(--max-width);
@@ -388,7 +368,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">Capsor <span>AB</span></a>
+            <a href="#" class="logo"><img src="CapsorWebSiteLogo.jpg" alt="Capsor AB" title="Capsor AB"></a>
             <button type="button" class="mobile-toggle" aria-label="Toggle menu"
                 onclick="document.querySelector('.nav-links').classList.toggle('open')">
                 <span></span>
@@ -467,15 +447,6 @@
                 platforms at Quickbit, FRISQ, Barnebys, NASDAQ/OMX, SIX Telekurs, and AMEX — often in systems where
                 reliability, latency, and scalability are essential. I'm frequently brought in to simplify complex
                 environments and help teams deliver with confidence.</p>
-            <div class="company-tags">
-                <span>Valuno Group</span>
-                <span>Quickbit</span>
-                <span>FRISQ</span>
-                <span>Barnebys</span>
-                <span>NASDAQ/OMX</span>
-                <span>SIX Telekurs</span>
-                <span>AMEX</span>
-            </div>
         </div>
     </div>
 
@@ -501,8 +472,7 @@
 
     <!-- Footer -->
     <footer>
-        <span>&copy; 2008–2026 Capsor AB. All Rights Reserved.</span>
-        <a href="mailto:henrik@capsor.se">henrik@capsor.se</a>
+        <span>&copy; 2008-2026 Capsor AB. All Rights Reserved.</span>
     </footer>
 </body>
 
