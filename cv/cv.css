@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+	--blue: #4a90c4;
+	--orange: rgb(230, 139, 20);
+	--ink: #111;
+	--text: #333;
+	--muted: #666;
+}
+
+html { font-size: 9.6pt; }
+
+body {
+	font-family: 'DM Sans', system-ui, sans-serif;
+	color: var(--text);
+	line-height: 1.45;
+	margin: 0;
+}
+
+.cv-header {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid var(--orange);
+	margin-bottom: 10px;
+}
+
+.cv-photo {
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+h1 {
+	font-size: 2.3rem;
+	color: var(--ink);
+	margin: 0;
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+}
+
+.cv-title {
+	font-size: 1.15rem;
+	font-weight: 500;
+	color: var(--blue);
+	margin: 2px 0;
+}
+
+.cv-contact {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.85rem;
+	color: var(--muted);
+	margin: 0;
+}
+
+h2 {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.9rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--blue);
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 3px;
+	margin: 14px 0 6px;
+	break-after: avoid;
+}
+
+h3 {
+	font-size: 1.1rem;
+	color: var(--ink);
+	margin: 10px 0 0;
+	break-after: avoid;
+}
+
+.meta {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.82rem;
+	color: var(--muted);
+	margin: 0 0 3px;
+}
+
+p { margin: 0 0 4px; }
+
+ul { margin: 2px 0 0; padding-left: 16px; }
+
+li { margin: 1px 0; }
+
+li::marker { color: var(--orange); }
+
+ul.timeline { list-style: none; padding-left: 0; }
+
+ul.timeline li {
+	display: grid;
+	grid-template-columns: 82px 1fr;
+	gap: 8px;
+	padding: 2px 0;
+	break-inside: avoid;
+}
+
+.when {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.82rem;
+	color: var(--muted);
+	padding-top: 1px;
+}
+
+.page-break { break-before: page; }
+
+.cv-footer {
+	margin-top: 14px;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.82rem;
+	color: var(--muted);
+}
