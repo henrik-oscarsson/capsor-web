@@ -25,7 +25,7 @@ CIKO is a Swedish job security council. It builds its own platform, Trygga, and 
 - Introduced working in pairs and threes to spread knowledge and a shared engineering approach.
 - Rolled out agentic, AI-driven development (Claude, Superpowers). Features now ship in 1–2 days instead of 1–2 weeks.
 
-### CTO — Valuno Group (formerly Quickbit)
+### CTO — Valuno Group
 
 <p class="meta">Jan 2025 – Mar 2026 · Engineering Manager &amp; Solution Architect, then CTO from May 2025</p>
 
@@ -33,8 +33,6 @@ Crypto payment solutions in a high-transaction environment with built-in monitor
 
 - Set the technical standard and direction for the payment platform (AWS, GCP, blockchain).
 - Hired and built the engineering team; mentored and coached engineers.
-- Simplified the platform to fewer moving parts, frameworks and languages.
-- Introduced an AI-first approach to increase productivity and speed of delivery.
 
 ### Fullstack Developer — FRISQ
 
