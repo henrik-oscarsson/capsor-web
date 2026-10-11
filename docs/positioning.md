@@ -34,7 +34,7 @@ CIKO is a Swedish job security council (transition organisation). It builds its 
 ## Technical depth
 
 - Trading and exchanges: AMEX, Credit Suisse, NASDAQ OMX, SIX Telekurs, SFE.
-- Crypto payments: Quickbit / Valuno Group (high-transaction, regulated).
+- First CTO role: Valuno Group (2025–26). Mention briefly only, no detail, no "formerly Quickbit"; steer to high-transaction and trading experience instead.
 - High-performance systems: real-time rendering, threading models, latency.
 - Insurance: iFACTS. Healthtech: FRISQ. Marketplaces: Barnebys. Digital identity: Trust Anchor Group.
 - Large delivery: tech lead for 16 developers in a 40-person e-commerce programme in London (ustwo / POWA).
