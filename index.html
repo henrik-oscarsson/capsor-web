@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capsor AB — Technical Leadership</title>
+    <title>Henrik Oscarsson — CTO · Capsor AB</title>
     <meta name="description"
-        content="Henrik Oscarsson — Senior engineering leader with 25 years of experience building and scaling complex software systems.">
+        content="Henrik Oscarsson is a CTO who makes engineering teams faster by changing how they work, not by adding process. 25 years in trading, payments and high-performance systems.">
     <link rel="icon" href="favicon.ico" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -318,6 +318,103 @@
             text-decoration: underline;
         }
 
+        /* Intro with portrait */
+        .intro {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .portrait {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Results strip */
+        .results-lead {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-gray);
+            margin-bottom: 1.25rem;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .result-value {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 500;
+            line-height: 1.1;
+            color: var(--color-secondary);
+        }
+
+        .result-label {
+            display: block;
+            margin-top: 0.5rem;
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Principles grid */
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .principles .roles {
+            margin-top: 0;
+            padding: 2rem;
+        }
+
+        .principle-num {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--color-secondary);
+        }
+
+        .principles h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0.25rem 0 0.5rem;
+        }
+
+        /* Lists in content blocks */
+        .content-block ul.plain {
+            list-style: none;
+            margin-top: 1.25rem;
+            max-width: 720px;
+        }
+
+        .content-block ul.plain li {
+            padding: 0.6rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            color: #444;
+        }
+
+        .content-block .links {
+            margin-top: 1.25rem;
+        }
+
+        .content-block .links a {
+            color: var(--color-secondary);
+            font-weight: 500;
+        }
+
         /* Responsive */
         @media (max-width: 640px) {
             .mobile-toggle {
@@ -353,6 +450,17 @@
                 padding: 1.75rem;
             }
 
+            .intro {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.25rem;
+            }
+
+            .results,
+            .principles {
+                grid-template-columns: 1fr;
+            }
+
             footer {
                 flex-direction: column;
                 gap: 0.75rem;
@@ -374,8 +482,9 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="CV_Henrik_Oscarsson_en.pdf" target="_blank" rel="noopener">CV (English)</a></li>
+                <li><a href="#how">How I work</a></li>
+                <li><a href="#work">Work with me</a></li>
+                <li><a href="CV_Henrik_Oscarsson_en.pdf" target="_blank" rel="noopener">CV</a></li>
                 <li><a href="mailto:henrik@capsor.se" class="btn-nav">Get in Touch</a></li>
             </ul>
         </nav>
@@ -388,83 +497,134 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Technical Leadership for <span class="hero-accent">Modern Product Teams</span></h1>
+        <h1>Engineering teams that ship in <span class="hero-accent">days, not weeks</span>.</h1>
     </section>
 
     <!-- About -->
     <section id="about">
-        <p class="about-text">I'm Henrik Oscarsson, a CTO and senior engineering leader with 25 years of experience
-            building and scaling complex software systems — primarily in finance, trading, and high-transaction payment
-            environments. I work at the intersection of technology, business, and execution, helping companies deliver
-            robust platforms with speed, clarity, and long-term sustainability. Over the years, I've supported
-            organizations ranging from global enterprises to fast-moving product teams, often stepping in where
-            technical direction, architectural clarity, and delivery focus are critical. My role is to ensure that
-            technology becomes an enabler of growth — not a bottleneck.</p>
+        <div class="intro">
+            <img src="henrik.jpg" alt="Henrik Oscarsson" class="portrait">
+            <p class="about-text">I'm Henrik Oscarsson, CTO at CIKO, where I lead the team building Trygga, a
+                platform CIKO uses itself and licenses to other transition organisations in Sweden. I make
+                engineering teams faster by changing how they work, not by adding process. Behind that are 25 years
+                of hands-on engineering in trading, payments and high-performance systems, so the advice holds up
+                technically.</p>
+        </div>
     </section>
 
-    <div class="divider">
-        <hr>
-    </div>
-
-    <!-- Building Strong Teams -->
+    <!-- Results -->
     <div class="content-block">
-        <h2>Building Strong Teams Through Mentorship and Architecture<span class="dot">.</span></h2>
-        <p>My work often goes beyond systems design — I take an active role in mentoring engineers, strengthening team
-            structure, and raising the technical standard across an organization. I enjoy building environments where
-            developers can thrive, grow in confidence, and deliver high-quality software together. I've led teams in
-            both startup and enterprise settings, and I'm comfortable in CTO-level steering groups where technology
-            decisions must align tightly with business goals. Clear communication between engineering and leadership is
-            often the key to successful execution, and it's a space where I bring long experience.</p>
-    </div>
-
-    <div class="divider">
-        <hr>
-    </div>
-
-    <!-- AI-First Engineering -->
-    <div class="content-block">
-        <h2>AI-First Engineering<span class="dot">.</span></h2>
-        <p>Today, I apply an AI-first approach to software development and technical leadership — using modern tools
-            such as Claude and AI-assisted workflows to increase delivery speed, improve developer productivity, and
-            reduce unnecessary complexity. The goal is not automation for its own sake, but building calmer, sharper,
-            more effective engineering teams. When AI is introduced thoughtfully, it becomes a force multiplier: helping
-            teams stay focused, ship faster, and spend more time solving the right problems.</p>
+        <p class="results-lead">At CIKO, in under six months</p>
+        <ul class="results">
+            <li>
+                <span class="result-value">3 → 1</span>
+                <span class="result-label">Three teams of 15 engineers, now working as one team with tight,
+                    everyday communication.</span>
+            </li>
+            <li>
+                <span class="result-value">1–2 days</span>
+                <span class="result-label">Typical time to ship a feature, down from 1–2 weeks.</span>
+            </li>
+            <li>
+                <span class="result-value">&lt; 6 months</span>
+                <span class="result-label">From joining to a new way of working, in place and delivering.</span>
+            </li>
+        </ul>
     </div>
 
     <div class="divider">
         <hr>
     </div>
 
-    <!-- Recent Roles -->
-    <div class="content-block">
-        <h2>Recent Roles<span class="dot">.</span></h2>
-        <div class="roles">
-            <p>Most recently, I'm serving as CTO at Valuno Group, setting technical direction for crypto payment
-                solutions, mentoring engineers, and driving hiring and team growth in a high-transaction, regulated
-                environment. My background also includes leading architecture and performance improvements across
-                platforms at Credit Suisse, FRISQ, Barnebys Group, NASDAQ/OMX, SIX Telekurs, and AMEX — often in systems
-                where
-                reliability, latency, and scalability are essential. I'm frequently brought in to simplify complex
-                environments and help teams deliver with confidence.</p>
-        </div>
+    <!-- How I work -->
+    <div class="content-block" id="how">
+        <h2>How I work<span class="dot">.</span></h2>
+        <p>None of this is complicated. It's a handful of deliberate choices that remove friction and give people
+            ownership.</p>
+        <ol class="principles">
+            <li class="roles">
+                <span class="principle-num">01</span>
+                <h3>One standup, one topic.</h3>
+                <p>Instead of a ticket-by-ticket status round, each day's standup is about the single most important
+                    thing for the team right now. Meetings stay short, and everyone leaves knowing what matters
+                    today.</p>
+            </li>
+            <li class="roles">
+                <span class="principle-num">02</span>
+                <h3>Under half a day? Just do it.</h3>
+                <p>Small fixes, tech debt and improvements don't need a ticket, a refinement session or permission.
+                    That creates flow and ownership, and the platform keeps getting better on its own.</p>
+            </li>
+            <li class="roles">
+                <span class="principle-num">03</span>
+                <h3>Work in twos and threes.</h3>
+                <p>When a task needs it, people group up in pairs or threes. Knowledge spreads naturally, and the
+                    team builds a shared view of how we build things, without relying on documentation.</p>
+            </li>
+            <li class="roles">
+                <span class="principle-num">04</span>
+                <h3>Agentic by default.</h3>
+                <p>I introduce AI by example: start with concrete, repetitive tasks like "build a UI component to our
+                    standards, with tests", then move to agentic frameworks that handle the orchestration. Features
+                    that used to take 1–2 weeks now ship in 1–2 days.</p>
+            </li>
+        </ol>
     </div>
 
-    <!-- Passion Banner -->
+    <!-- Banner -->
     <div class="passion-banner">
         <div class="inner">
-            <h2>Passion for <span class="white">Software</span></h2>
+            <h2>Fewer rituals. More flow. <span class="white">Faster teams.</span></h2>
         </div>
+    </div>
+
+    <!-- Track record -->
+    <div class="content-block">
+        <h2>Track record<span class="dot">.</span></h2>
+        <p>My advice on ways of working holds up because I've spent 25 years building the systems myself, often
+            where latency, reliability and scale aren't negotiable. Before CIKO, I was CTO at Valuno Group (formerly
+            Quickbit), setting the technical standard for crypto payments in a high-transaction, regulated
+            environment.</p>
+        <ul class="plain">
+            <li><strong>Trading and exchanges</strong> — AMEX in New York, Credit Suisse in London, NASDAQ OMX,
+                SIX Telekurs, SFE in Australia.</li>
+            <li><strong>High-performance systems</strong> — real-time trading terminals, threading models,
+                latency-critical clients.</li>
+            <li><strong>Product platforms</strong> — Barnebys (marketplaces), FRISQ (healthtech), iFACTS
+                (insurance), Trust Anchor Group (digital identity).</li>
+            <li><strong>Large-scale delivery</strong> — tech lead for 16 developers in a 40-person e-commerce
+                programme in London.</li>
+            <li><strong>Also contracted by</strong> — Nokia and Microsoft.</li>
+        </ul>
+        <p class="links"><a href="CV_Henrik_Oscarsson_en.pdf" target="_blank" rel="noopener">Read my CV (PDF)</a>
+            &nbsp;·&nbsp; <a href="CV_Henrik_Oscarsson_full_en.pdf" target="_blank" rel="noopener">Full project
+                history (PDF)</a></p>
+    </div>
+
+    <div class="divider">
+        <hr>
+    </div>
+
+    <!-- Work with me -->
+    <div class="content-block" id="work">
+        <h2>Work with me<span class="dot">.</span></h2>
+        <p>I'm currently CTO at CIKO, and always happy to talk about what's next. Through Capsor, I work in three
+            ways:</p>
+        <ul class="plain">
+            <li><strong>Permanent CTO</strong> — building an engineering organisation, or turning one around.</li>
+            <li><strong>Interim CTO</strong> — covering a critical phase or a leadership gap, with a clear
+                handover.</li>
+            <li><strong>Advisory</strong> — helping an existing team adopt leaner ways of working and AI-driven
+                development.</li>
+        </ul>
     </div>
 
     <!-- CTA -->
     <div class="cta">
         <div class="cta-box">
-            <h2>Let's Build What's Next</h2>
-            <p>If you need a technical leader who can combine architecture depth, team mentorship, and AI-enabled
-                execution, I'd love to help. Whether you're scaling a product team, modernizing a platform, or looking
-                for CTO-level guidance during a critical phase, I bring both strategic oversight and hands-on
-                engineering
-                experience.</p>
+            <h2>Let's talk</h2>
+            <p>Whether you're hiring a CTO, need a steady hand through a critical phase, or want your team shipping
+                in days instead of weeks, I'd be glad to hear what you're working on.</p>
             <a href="mailto:henrik@capsor.se" class="btn-cta">Get in Touch</a>
         </div>
     </div>
