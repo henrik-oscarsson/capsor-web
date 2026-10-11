@@ -34,7 +34,7 @@ A visual redesign of the site is explicitly **out of scope**. It is a possible f
 | `cv/cv.md` | New two-page CV source. |
 | `cv/cv.css` | Print stylesheet matching the site's fonts and colours (DM Sans, IBM Plex Mono, `#4a90c4`, orange accent). |
 | `CV_Henrik_Oscarsson_en.pdf` | **Generated** from `cv/cv.md`, overwriting the current file so existing links keep working. |
-| `CV_Henrik_Oscarsson_full_en.pdf` | The current 6-page CV, renamed via `git mv`. It serves as the full project history. |
+| `CV_Henrik_Oscarsson_full_en.pdf` | Full project history: a copy of `~/Documents/Capsor/Konsultprofil/Konsultprofil_Henrik_Oscarsson_en_cto.pdf`, the updated 6-page Word export that includes iFACTS, AMEX 2020 and Trust Anchor Group. To update it later, re-export from the `.docx` and copy it over. |
 
 **PDF generation:** `npx md-to-pdf cv/cv.md` using `cv/cv.css`. It must use the locally installed Google Chrome (via `launch_options.executablePath`) to avoid downloading Chromium. The exact command goes in `README.md`.
 
@@ -129,5 +129,4 @@ Reuse existing styles and colour variables. New CSS is limited to the results st
 ## Open items and follow-ups (not blocking)
 
 - Henrik to confirm the Barnebys start date (he suspects it was earlier than May 2022). The remaining gap, Apr 2021 – Apr 2022, is left as is for now.
-- Henrik to add the iFACTS, AMEX 2020 and Trust Anchor Group assignments to the Word source of the full project history and re-export it.
 - Possible later project: a visual redesign of the site.
