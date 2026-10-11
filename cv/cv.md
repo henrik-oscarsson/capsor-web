@@ -92,6 +92,7 @@ White-label auction platform that gives Nordic auction houses an online presence
 ## Education &amp; training
 
 <ul class="timeline">
+<li><span class="when">2026</span><span>Organisation, Team, Ledarskap, Handelshögskolan</span></li>
 <li><span class="when">2024</span><span>Designing and Building AI Products and Services, MIT xPro</span></li>
 <li><span class="when">2012</span><span>Graphic Design &amp; Communication, Berghs School of Communication</span></li>
 <li><span class="when">2009</span><span>Certified Scrum Master, London</span></li>
