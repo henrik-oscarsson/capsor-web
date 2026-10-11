@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henrik Oscarsson — CTO · Capsor AB</title>
     <meta name="description"
-        content="Henrik Oscarsson is a CTO who makes engineering teams faster by changing how they work, not by adding process. 25 years in trading, payments and high-performance systems.">
+        content="Henrik Oscarsson is a CTO who makes engineering teams faster by changing how they work, not by adding process. 25 years in trading and payments.">
     <link rel="icon" href="favicon.ico" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -367,6 +367,18 @@
             line-height: 1.5;
         }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         /* Principles grid */
         .principles {
             display: grid;
@@ -514,11 +526,11 @@
 
     <!-- Results -->
     <div class="content-block">
-        <p class="results-lead">At CIKO, in under six months</p>
+        <p class="results-lead">At CIKO, since April 2026</p>
         <ul class="results">
             <li>
-                <span class="result-value">3 → 1</span>
-                <span class="result-label">Three teams of 15 engineers, now working as one team with tight,
+                <span class="result-value"><span aria-hidden="true">3 → 1</span><span class="visually-hidden">Three teams to one</span></span>
+                <span class="result-label">Three teams, 15 engineers in total, now working as one team with tight,
                     everyday communication.</span>
             </li>
             <li>
@@ -565,8 +577,7 @@
                 <span class="principle-num">04</span>
                 <h3>Agentic by default.</h3>
                 <p>I introduce AI by example: start with concrete, repetitive tasks like "build a UI component to our
-                    standards, with tests", then move to agentic frameworks that handle the orchestration. Features
-                    that used to take 1–2 weeks now ship in 1–2 days.</p>
+                    standards, with tests", then move to agentic frameworks that handle the orchestration.</p>
             </li>
         </ol>
     </div>
