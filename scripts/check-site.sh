@@ -14,7 +14,7 @@ need $H 'Fewer rituals.<br>More flow.<br><span class="block">Faster teams.</span
 need $H '3 → 1'; need $H '1–2 days'; need $H '&lt; 6 months'
 need $H 'One standup, one topic.'; need $H 'Under half a day? Just do it.'
 need $H 'Work in twos and threes.'; need $H 'Agentic by default.'
-need $H 'id="how"'; need $H 'id="work"'; need $H 'href="#how"'; need $H 'href="#work"'
+need $H 'id="how"'; need $H 'id="notes"'; need $H 'href="#how"'; need $H 'href="#notes"'
 need $H 'Four deliberate choices that remove friction and give people ownership.'
 need $H '25 years building the systems myself.'
 need $H 'CTO at CIKO, building Trygga.'
@@ -26,4 +26,6 @@ forbid $H '<style'
 for p in $(grep -oE '(href|src)="[^"#:]+"' $H | sed -E 's/^(href|src)="//; s/"$//'); do
   [ -e "$p" ] && echo "OK file   $p" || { echo "MISSING FILE $p"; fail=1; }
 done
+
+forbid $H 'Permanent CTO'; forbid $H 'Interim CTO'; forbid $H 'hiring a CTO'; forbid $H "what's next"
 exit $fail

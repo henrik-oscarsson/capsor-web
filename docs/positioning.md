@@ -2,10 +2,9 @@
 
 Source of truth for capsor.se and the CV. Change copy here first, then carry it over.
 
-## Audience
+## Audience and tone
 
-1. Recruiters, boards and founders hiring a CTO (primary).
-2. Companies looking for an interim CTO or advisory help via Capsor (close second).
+Engineering leaders, founders and boards interested in how engineering teams work. The site is a professional profile, not a sales pitch: the focus is CIKO and Trygga, and the invitation is to compare notes or book a talk, not to hire.
 
 ## Positioning statement
 
@@ -40,8 +39,8 @@ CIKO is a Swedish job security council (transition organisation). It builds its 
 - Large delivery: tech lead for 16 developers in a 40-person e-commerce programme in London (ustwo / POWA).
 - Also contracted by Nokia and Microsoft.
 
-## Ways to work with me
+## Let's compare notes
 
-- **Permanent CTO** — building or turning around an engineering organisation.
-- **Interim CTO** — covering a critical phase or a leadership gap.
-- **Advisory** — ways of working and AI-driven development for an existing team.
+- **Ways of working** — how small changes to rituals and ownership make a team noticeably faster.
+- **Agentic development** — what it takes, in practice, to move a team to AI-driven development.
+- **Talks and workshops** — presenting the approach to engineering teams and leadership groups.
