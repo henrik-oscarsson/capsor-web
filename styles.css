@@ -199,7 +199,7 @@ h2 {
 /* Hero */
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 640px);
+    grid-template-columns: minmax(0, 1fr) min(640px, 41%);
     min-height: 560px;
 }
 
