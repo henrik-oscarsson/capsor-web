@@ -1,0 +1,27 @@
+{
+  "name": "capsor-web",
+  "version": "1.0.0",
+  "description": "This is the Capsor AB website. It is a plain one page html site.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrik-oscarsson/capsor-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/henrik-oscarsson/capsor-web/issues"
+  },
+  "homepage": "https://github.com/henrik-oscarsson/capsor-web#readme",
+  "devDependencies": {
+    "opentype.js": "^1.3.4"
+  }
+}
