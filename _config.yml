@@ -1,0 +1,9 @@
+# GitHub Pages (Jekyll) build settings: publish only the website itself.
+exclude:
+  - docs/
+  - scripts/
+  - cv/
+  - package.json
+  - package-lock.json
+  - README.md
+  - node_modules/
