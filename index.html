@@ -7,11 +7,11 @@
     <title>Henrik Oscarsson — CTO · Capsor AB</title>
     <meta name="description"
         content="Henrik Oscarsson is a CTO who makes engineering teams faster by changing how they work, not by adding process. 25 years in trading and payments.">
-    <link rel="icon" href="favicon.ico" type="image/png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,13 +21,15 @@
     <header class="site-header">
         <nav class="wrap">
             <a href="#" class="logo"><img src="assets/logo.svg" alt="Capsor AB" width="95" height="43"></a>
-            <button type="button" class="mobile-toggle" aria-label="Toggle menu"
-                onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <button type="button" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="site-nav"
+                onclick="this.setAttribute('aria-expanded', document.getElementById('site-nav').classList.toggle('open'))">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="site-nav"
+                onclick="if (event.target.closest('a')) { this.classList.remove('open'); document.querySelector('.mobile-toggle').setAttribute('aria-expanded', 'false'); }">
                 <li><a href="#how">How I work</a></li>
                 <li><a href="#work">Work with me</a></li>
                 <li><a href="CV_Henrik_Oscarsson_en.pdf" target="_blank" rel="noopener">CV</a></li>
@@ -51,7 +53,7 @@
                 </div>
             </div>
             <div class="hero-photo">
-                <img src="assets/henrik.jpg" alt="Henrik Oscarsson" width="890" height="1000">
+                <img src="assets/henrik.jpg" alt="Henrik Oscarsson" width="1355" height="1523">
             </div>
         </section>
 
@@ -138,15 +140,16 @@
                             rel="noopener">Full project history (PDF)</a></p>
                 </div>
                 <ul class="domains">
-                    <li><strong>Trading and exchanges</strong> <span>AMEX in New York, Credit Suisse in London, NASDAQ
-                            OMX, SIX Telekurs, SFE in Australia.</span></li>
-                    <li><strong>High-performance systems</strong> <span>Real-time trading terminals, threading models,
-                            latency-critical clients.</span></li>
-                    <li><strong>Product platforms</strong> <span>Barnebys (marketplaces), FRISQ (healthtech), iFACTS
-                            (insurance), Trust Anchor Group (digital identity).</span></li>
-                    <li><strong>Large-scale delivery</strong> <span>Tech lead for 16 developers in a 40-person
-                            e-commerce programme in London.</span></li>
-                    <li><strong>Also contracted by</strong> <span>Nokia and Microsoft.</span></li>
+                    <li><strong>Trading and exchanges<span class="visually-hidden">:</span></strong> <span>AMEX in New
+                            York, Credit Suisse in London, NASDAQ OMX, SIX Telekurs, SFE in Australia.</span></li>
+                    <li><strong>High-performance systems<span class="visually-hidden">:</span></strong> <span>Real-time
+                            trading terminals, threading models, latency-critical clients.</span></li>
+                    <li><strong>Product platforms<span class="visually-hidden">:</span></strong> <span>Barnebys
+                            (marketplaces), FRISQ (healthtech), iFACTS (insurance), Trust Anchor Group (digital
+                            identity).</span></li>
+                    <li><strong>Large-scale delivery<span class="visually-hidden">:</span></strong> <span>Tech lead
+                            for 16 developers in a 40-person e-commerce programme in London.</span></li>
+                    <li><strong>Also contracted by<span class="visually-hidden">:</span></strong> <span>Nokia and Microsoft.</span></li>
                 </ul>
             </div>
         </section>

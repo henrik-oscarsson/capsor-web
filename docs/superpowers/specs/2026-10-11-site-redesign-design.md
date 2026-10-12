@@ -105,7 +105,7 @@ Copy comes from the current `index.html` and `docs/positioning.md`. Changes:
 
 - Visible `:focus-visible` outline (2px, offset 3px; black on light backgrounds, orange on black).
 - Portrait alt text: "Henrik Oscarsson". Logo SVG has a title. The visually hidden "Three teams to one" label is kept.
-- Heading order: one H1 (hero); an H2 for each section that has a heading (How I work, Track record, CTA); H3 for principles and cards. Results, the statement and Work with me lead with a mono label (`<p class="label">`) instead of a heading, which matches the approved mockup.
+- Heading order: one H1 (hero); an H2 for each section that has a heading (How I work, Track record, CTA); H3 for principles and cards. Results and Work with me lead with a mono label (`<p class="label">`) and the statement has no heading or label, which matches the approved mockup.
 - No content conveyed by colour alone.
 
 ## CV restyle
